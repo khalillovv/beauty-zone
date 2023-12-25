@@ -1,0 +1,42 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 32px 0;
+    background: rgba(255, 255, 255, 0.25);
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        gap: 40px;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 56px;
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    &__contacts {
+        display: flex;
+        gap: 32px;
+    }
+
+    &__contacts-icon {
+        color: var(--color-primary-dark);
+        transition: fill .3s;
+        
+        &:hover {
+            fill: var(--color-brand);
+        }
+    }
+}
