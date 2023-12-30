@@ -20,13 +20,32 @@
     }
 
     &__form {
+        width: 422px;
         border-radius: 32px;
         background-color: var(--color-primary-dark);
+        background-image: url(../images/contact-form-background.png);
+    }
+
+    &__form-container {
+        max-width: 310px;
+        margin: 48px 56px;
     }
 
     &__form-title {
         text-align: center;
         color: var(--color-primary-white);
         margin-bottom: 32px;
+    }
+
+    &__form-field {
+        margin-bottom: 16px;
+    }
+
+    &__button {
+        margin: 0 auto 8px;
+
+        &:hover {
+            color: var(--color-primary-white);
+        }
     }
 }
