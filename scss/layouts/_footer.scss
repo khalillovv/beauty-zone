@@ -1,0 +1,80 @@
+.footer {
+    position: relative;
+    background-color: var(--color-primary-dark);
+    background-image: url(../images/footer-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 56px 0;
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        content: '';
+        width: 248px;
+        height: 152px;
+        background-image: url(../images/decor-footer.png);
+    }
+
+    &__container {
+        display: flex;
+        gap: 20px;
+        flex-basis: 50%;
+    }
+
+    &__nav,
+    &__address {
+        display: flex;
+        gap: 20px;
+        flex-basis: 50%;
+    }
+
+    &__address-contacts {
+        flex-grow: 1;
+    }
+    
+    &__logo,
+    &__menu {
+        flex-grow: 1;
+    }
+
+    &__link,
+    &__address-link {
+        color: var(--color-primary-white);
+        font-size: 16px;
+        line-height: 1.2;
+        margin-bottom: 16px;
+        transition: color .3s;
+
+        &:hover {
+            color: var(--color-brand);
+            cursor: pointer;
+        }
+    }
+
+    &__address-social {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__address-icon {
+        fill: var(--color-primary-white);
+        transition: fill .3s;
+        &:hover {
+            fill: var(--color-brand);
+        }
+    }
+
+    &__address-copyright {
+        font-size: 13px;
+        line-height: 1.2;
+        color: var(--color-gray-light);
+    }
+    
+    &__address-list,
+    &__address-info {
+        flex-grow: 1;
+    }
+}
