@@ -31,6 +31,9 @@
     overflow-y: auto;
 
     &__btn-close {
+        position: absolute;
+        top: 42px;
+        right: 42px;
         display: flex;
         flex-shrink: 0;
         width: 32px;
@@ -51,10 +54,7 @@
         font-size: 64px;
         font-weight: 700;
         line-height: 1.15;
-        
-        &--centered {
-            text-align: center;
-        }
+        text-align: center;
     }
 
     &__text {
@@ -64,12 +64,6 @@
         color: var(--color-primary-white);
         margin-bottom: 32px;
         text-align: center;
-    }
-
-    &__btn-close {
-        position: absolute;
-        top: 42px;
-        right: 42px;
     }
 
     &__form-field {
