@@ -90,5 +90,9 @@
 
     &__button {
         margin: 0 auto 8px;
+
+        &:hover {
+            color: var(--color-primary-white);
+        }
     }
 }
