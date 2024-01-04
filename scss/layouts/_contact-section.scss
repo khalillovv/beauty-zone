@@ -55,6 +55,7 @@
         @media screen and (min-width: $bp-tablet) {
             margin: auto;
             width: 422px;
+            max-width: none;
         }
     }
 
