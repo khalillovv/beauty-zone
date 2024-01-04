@@ -2,18 +2,29 @@
     background: linear-gradient( rgba(43, 127, 255, 0.20), rgba(0, 0, 0, 0)); 
 
     &__title {
-        margin-bottom: 48px;
+        margin-bottom: 24px;
+        
+        @media screen and (min-width: $bp_desktop) {
+            margin-bottom: 48px;
+        }
     }
 
     &__list {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        gap: 56px;
+        align-items: center;
+        gap: 16px;
+        
+        @media screen and (min-width: $bp_tablet) {
+            flex-direction: row;
+            gap: 56px;
+        }
     }
 
     &__item {
-        width: 316px;
-        height: 181px;
+        max-width: 316px;
+        max-height: 181px;
         padding: 24px 32px;
         overflow: hidden;
         justify-content: center;
@@ -21,6 +32,14 @@
         border-radius: 32px;
         background-color: var(--color-primary-white);
         box-shadow: 0px 4px 4px 0px rgba(168, 198, 245, 0.38);
+
+        @media screen and (min-width: $bp_tablet) {
+            max-height: 250px;
+        }
+
+        @media screen and (min-width: $bp_desktop) {
+            max-height: 181px;
+        }
     }
 
     &__icon {

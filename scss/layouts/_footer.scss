@@ -8,6 +8,7 @@
     padding: 56px 0;
 
     &::after {
+        display: none;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -16,19 +17,35 @@
         width: 248px;
         height: 152px;
         background-image: url(../images/decor-footer.png);
+
+        @media screen and (min-width: $bp-desktop) {
+            display: flex;
+        }
     }
 
     &__container {
         display: flex;
         gap: 20px;
-        flex-basis: 50%;
+        flex-direction: column;
+        
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+            flex-basis: 50%;
+        }
     }
 
     &__nav,
     &__address {
         display: flex;
+        flex-direction: column;
         gap: 20px;
-        flex-basis: 50%;
+        text-align: center;
+        
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+            flex-basis: 50%;
+            text-align: left;
+        }
     }
 
     &__address-contacts {
@@ -56,7 +73,12 @@
 
     &__address-social {
         display: flex;
+        justify-content: center;
         gap: 24px;
+
+        @media screen and (min-width: $bp-tablet) {
+            justify-content: flex-start;
+        }
     }
 
     &__address-icon {

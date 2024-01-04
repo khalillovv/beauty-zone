@@ -1,5 +1,10 @@
 .contact-section {
-    padding-bottom: 94px;
+    padding-bottom: 0;
+    
+    @media screen and (min-width: $bp-tablet) {
+        padding-bottom: 94px;
+
+    }
 
     &__title {
         margin-bottom: 48px;
@@ -7,23 +12,50 @@
 
     &__container {
         display: flex;
-        flex-direction: row;
-        gap: 32px;
+        flex-direction: column-reverse;
+        gap: 24px;
+
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+            gap: 24px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            gap: 32px;
+        }
     }
     
     &__map {
         flex-shrink: 0;
-        height: 480px;
-        width: 600px;
+        height: 176px;
+        margin: 0 -24px;
         border-radius: 16px;
         border: none;
+        
+        @media screen and (min-width: $bp-tablet) {
+            margin: auto;
+            width: 340px;
+            height: 500px;
+        }
+        
+        @media screen and (min-width: $bp-desktop) {
+            width: 600px;
+            height: 595px;
+        }
     }
 
     &__form {
-        width: 422px;
+        max-width: 320px;
+        width: 100%;
         border-radius: 32px;
         background-color: var(--color-primary-dark);
         background-image: url(../images/contact-form-background.png);
+        margin: 0 auto;
+
+        @media screen and (min-width: $bp-tablet) {
+            margin: auto;
+            width: 422px;
+        }
     }
 
     &__form-container {
@@ -43,6 +75,11 @@
 
     &__button {
         margin: 0 auto 8px;
+        font-size: 16px;
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 18px;
+        }
 
         &:hover {
             color: var(--color-primary-white);
